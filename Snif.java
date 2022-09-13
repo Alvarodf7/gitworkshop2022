@@ -41,15 +41,15 @@ public class Snif {
                 System.out.println(IpC);
                 System.out.println(length);
                 String[] vector = mensaje.split(" ");
-                String Longitud = vector[0];
-                String Latitud = vector[1];
-                String Fecha = vector[2];        
-                String Hora  = vector[3];       
+                String Longitud = vector[1];
+                String Latitud = vector[2];
+                String Fecha = vector[3];        
+                String Hora  = vector[4];       
                 
                 System.out.println(Longitud);
-                String user = "root";
-                String clave = "";
-                String url = "jdbc:mysql://localhost:3306/basededatos";
+                String user = "admin";
+                String clave = "andres102030";
+                String url = "jdbc:mysql://database-1.ccarysyysokd.us-east-1.rds.amazonaws.com:3306";
                 Statement stmt;
                 
                 try {
@@ -61,7 +61,7 @@ public class Snif {
                 try {
                     Connection c = DriverManager.getConnection(url, user, clave);
                     stmt = c.createStatement();
-                    stmt.executeUpdate("INSERT INTO disen VALUES('"+Longitud+"', '"+Latitud+"' ,'"+Fecha+"','"+Hora+"' )");
+                    stmt.executeUpdate("INSERT INTO design.disen VALUES('"+Longitud+"', '"+Latitud+"' ,'"+Fecha+"','"+Hora+"' )");
                     
             }   catch (SQLException ex){
                         Logger.getLogger(Snif.class.getName()).log(Level.SEVERE, null, ex);
@@ -76,3 +76,5 @@ public class Snif {
 
     }
 }
+
+
