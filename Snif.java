@@ -48,7 +48,7 @@ public class Snif {
                 
                 System.out.println(Longitud);
                 String user = "admin";
-                String clave = "andres102030";
+                String clave = "";
                 String url = "jdbc:mysql://database-1.ccarysyysokd.us-east-1.rds.amazonaws.com:3306";
                 Statement stmt;
                 
